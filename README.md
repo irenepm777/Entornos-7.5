@@ -38,6 +38,7 @@ JoinWaitingList -. "<<extend>>" .-> BookClass
 
 ## Tarea 2 — Diagrama de Secuencia: Confirmar Reserva
 
+```mermaid
 sequenceDiagram
     actor Member
     participant WebInterface
@@ -58,9 +59,10 @@ sequenceDiagram
         BookingManager-->>WebInterface: noSeatsAvailable()
         WebInterface-->>Member: showWaitingListOption()
     end
-
+```
 
 ## Tarea 3 — Diagrama de Comunicación
+```mermaid
 graph LR
     Member[":Member"]
     WebInterface[":WebInterface"]
@@ -76,10 +78,10 @@ graph LR
 
     BookingManager -->|1.2a: noSeatsAvailable()| WebInterface
     WebInterface -->|1.3a: showWaitingListOption()| Member
-
+```
 
 ## Tarea 4 — Diagrama de Actividades: Validación de Reserva
-
+```mermaid
 flowchart TD
     A([Start]) --> B[Receive booking request]
     B --> C{Fee paid?}
@@ -95,10 +97,10 @@ flowchart TD
 
     Z --> G
     Y --> G
-
+```
 
 ## Tarea 5 — Diagrama de Estados: Objeto Reservation
-
+```mermaid
 stateDiagram-v2
     [*] --> Pending
 
@@ -112,4 +114,4 @@ stateDiagram-v2
     Realized --> [*]
     Cancelled --> [*]
     NoShow --> [*]
-
+```
