@@ -64,7 +64,6 @@ sequenceDiagram
 ## Tarea 3 — Diagrama de Comunicación
 ```mermaid
 graph LR
-graph LR
 
 Member
 WebInterface
