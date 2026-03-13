@@ -34,7 +34,7 @@ CancelSession -. "<<include>>" .-> Login
 
 %% Extend
 JoinWaitingList -. "<<extend>>" .-> BookClass
-
+```
 
 ## Tarea 2 — Diagrama de Secuencia: Confirmar Reserva
 
