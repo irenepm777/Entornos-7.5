@@ -78,7 +78,9 @@ BookingManager --> WebInterface
 WebInterface --> Member
 BookingManager --> WebInterface
 WebInterface --> Member
+```
 
+**Orden mensaje**
 1. Member → WebInterface : confirmBooking(classId)  
 1.1 WebInterface → BookingManager : confirmBooking(memberId, classId)  
 1.1.1 BookingManager → Database : checkAvailability(classId)  
@@ -86,11 +88,10 @@ WebInterface --> Member
 1.2 BookingManager → WebInterface : bookingConfirmed()  
 1.3 WebInterface → Member : showSuccessMessage()  
 
-Flujo alternativo si no hay plazas:
-
+**Flujo alternativo si no hay plazas:**
 1.2a BookingManager → WebInterface : noSeatsAvailable()  
 1.3a WebInterface → Member : showWaitingListOption()  
-```
+
 
 ## Tarea 4 — Diagrama de Actividades: Validación de Reserva
 ```mermaid
