@@ -64,20 +64,20 @@ sequenceDiagram
 ## Tarea 3 — Diagrama de Comunicación
 ```mermaid
 graph LR
-    Member[":Member"]
-    WebInterface[":WebInterface"]
-    BookingManager[":BookingManager"]
-    Database[":Database"]
+    Member[Member]
+    WebInterface[WebInterface]
+    BookingManager[BookingManager]
+    Database[Database]
 
-    Member -->|1: confirmBooking(classId)| WebInterface
-    WebInterface -->|1.1: confirmBooking(memberId, classId)| BookingManager
-    BookingManager -->|1.1.1: checkAvailability(classId)| Database
-    Database -->|1.1.2: availabilityStatus| BookingManager
-    BookingManager -->|1.2: bookingConfirmed()| WebInterface
-    WebInterface -->|1.3: showSuccessMessage()| Member
+    Member -->|1 confirmBooking(classId)| WebInterface
+    WebInterface -->|1.1 confirmBooking(memberId, classId)| BookingManager
+    BookingManager -->|1.1.1 checkAvailability(classId)| Database
+    Database -->|1.1.2 availabilityStatus| BookingManager
+    BookingManager -->|1.2 bookingConfirmed()| WebInterface
+    WebInterface -->|1.3 showSuccessMessage()| Member
 
-    BookingManager -->|1.2a: noSeatsAvailable()| WebInterface
-    WebInterface -->|1.3a: showWaitingListOption()| Member
+    BookingManager -->|1.2a noSeatsAvailable()| WebInterface
+    WebInterface -->|1.3a showWaitingListOption()| Member
 ```
 
 ## Tarea 4 — Diagrama de Actividades: Validación de Reserva
